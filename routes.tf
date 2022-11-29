@@ -40,13 +40,13 @@ resource "aws_route" "ngw-route-to-private-subnets" {
 
 resource "aws_route" "peer-route-to-public-subnets" {
   route_table_id            = aws_route_table.public.id
-  destination_cidr_block    = var.DEFAULT_VPC_ID
+  destination_cidr_block    = var.DEFAULT_VPC_CIDR
   vpc_peering_connection_id = aws_vpc_peering_connection.peer.id
 }
 
 resource "aws_route" "peer-route-to-private-subnets" {
   route_table_id            = aws_route_table.private.id
-  destination_cidr_block    = var.DEFAULT_VPC_ID
+  destination_cidr_block    = var.DEFAULT_VPC_CIDR
   vpc_peering_connection_id = aws_vpc_peering_connection.peer.id
 }
 
