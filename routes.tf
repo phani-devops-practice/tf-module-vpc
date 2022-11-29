@@ -53,7 +53,7 @@ resource "aws_route" "peer-route-to-private-subnets" {
 }
 
 resource "aws_route" "peer-route-to-default-vpc" {
-  route_table_id            = var.DEFAULT_VPC_ID
+  route_table_id            = var.DEFAULT_VPC_RT
   destination_cidr_block    = var.VPC_CIDR
   vpc_peering_connection_id = aws_vpc_peering_connection.peer.id
 }
