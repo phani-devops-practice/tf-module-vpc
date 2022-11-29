@@ -16,10 +16,3 @@ resource "aws_nat_gateway" "ngw" {
     Name = "${var.PROJECT}-${var.ENV}-ngw"
   }
 }
-
-
-
-
-
-
-
