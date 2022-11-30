@@ -19,3 +19,5 @@ resource "aws_subnet" "private" {
     Name = "${var.PROJECT}-${var.ENV}-private-subnet"
   }
 }
+
+
